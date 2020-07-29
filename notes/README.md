@@ -5,8 +5,6 @@
 - git commit -m "备注"
 - git pull 
 - get push 
-
-1111aa      a
-
+- ggit 脚本 自动三连提交 
 ## 技术方案
-flask + Vue + mysql 
+flask + Vue3.0 + mysql 
