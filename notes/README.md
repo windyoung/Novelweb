@@ -6,7 +6,7 @@
 - git pull 
 - get push 
 
-1111aa
+1111aa      a
 
 ## 技术方案
 flask + Vue + mysql 
