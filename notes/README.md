@@ -25,12 +25,17 @@ flask + Vue3.0 + mysql
 - GRANT select ON books.* TO 'alex1943_read_books'@'%';
 - #刷新权限
 - FLUSH PRIVILEGES;
+### 修改密码 
+- ALTER USER USER() IDENTIFIED BY '你自己设置的密码';
+### 禁止  mysql root 远程登录
+- update user set host = "localhost" where user = "root" and host = "%";
+- FLUSH PRIVILEGES;
+***
 ## CENTOS7 
 ### 防火墙
 - iptables -I INPUT -p tcp --dport 23306 -j ACCEPT
 
-
-
+***
 # 问题处理
 ## CENTOS7 问题合集
 ### 磁盘
@@ -38,6 +43,7 @@ flask + Vue3.0 + mysql
 - 设置开机自动挂载需要修改/etc/fstab文件
 - 在文件的最后增加一行  /dev/mapper/data_ssd_0-database  /database_data  defaults 1 2
 
+***
 ## mysql 安装 问题集合
 ### ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/database_data/mysql/mysql_mysql.sock' (2) 
 - 产生此问题的原因一般有两个：
@@ -57,12 +63,7 @@ flask + Vue3.0 + mysql
 - default-character-set=utf8
 - socket=/storage/db/mysql/mysql.sock
 - 其中socket等于的路径就是socket文件的位置，我们只要修改my.cnf文件,告诉mysql，mysqldump，mysqladmin等命令，mysql服务的socket文件位置在哪里，然后重启mysqld服务即可。
-### 修改密码 
-- ALTER USER USER() IDENTIFIED BY '你自己设置的密码';
-### 禁止  mysql root 远程登录
-- update user set host = "localhost" where user = "root" and host = "%";
-- FLUSH PRIVILEGES;
 ### [ERROR] InnoDB: Operating system error number 13 in a file operation.
 - system error number 13 :: 权限问题
-- 解决方案 关闭 selinuxselinux ：setenforce 0 
-- ?????? chown -R mysql:mysql ./mysql/ ?????? 重启时测试下 
+- 解决方案 关闭 selinux ：setenforce 0 
+- 不关闭 selinux ?????? chown -R mysql:mysql ./mysql/ ?????? 重启时测试下 
