@@ -7,7 +7,9 @@
 - get push 
 - ggit 脚本 自动三连提交 
 ## 技术方案
-flask + Vue3.0 + mysql 
+flask    
+Vue3.0    
+mysql   
 ****
 ## mysql
 - #查看生成临时密码
@@ -17,15 +19,15 @@ flask + Vue3.0 + mysql
 - mysql -h localhost -u root -p books< ./books.sql  #从sqll恢复数据库
 ### 新建用户 bookbookwebweb
 - #这个命令会让你创建一个能在本地登录的alex1943_read_books的帐号，密码为qwe123，并且允许远程登录
-- CREATE USER 'alex1943_read_books'@'%' IDENTIFIED BY 'qwe123';
+CREATE USER 'alex1943_read_books'@'%' IDENTIFIED BY 'qwe123';  
 - #把这个数据库的所有权限赋予给这个alex1943_read_books这个账户
-- GRANT ALL PRIVILEGES ON books.* TO 'alex1943_read_books'@'%';
+GRANT ALL PRIVILEGES ON books.* TO 'alex1943_read_books'@'%';  
 - #这条命令会让alex1943_read_books这个账户会有和root一样的权限
-- GRANT ALL PRIVILEGES ON *.* TO 'alex1943_read_books'@'%';
-- ### 这条是正确的打开方式
-- GRANT select ON books.* TO 'alex1943_read_books'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'alex1943_read_books'@'%';  
+- 这条是正确的打开方式
+GRANT select ON books.* TO 'alex1943_read_books'@'%';  
 - #刷新权限
-- FLUSH PRIVILEGES;
+FLUSH PRIVILEGES;  
 ### 修改密码 
 - ALTER USER USER() IDENTIFIED BY '你自己设置的密码';
 ### 禁止  mysql root 远程登录
