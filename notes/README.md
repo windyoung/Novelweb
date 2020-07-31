@@ -49,6 +49,7 @@ FLUSH PRIVILEGES;
 - 挂载磁盘 mount /dev/mapper/data_ssd_0-database  /database_data 
 - 设置开机自动挂载需要修改/etc/fstab文件
 在文件的最后增加一行  /dev/mapper/data_ssd_0-database  /database_data  defaults 1 2
+
 ***
 ## python
 ### virtualenv
@@ -94,3 +95,7 @@ socket=/storage/db/mysql/mysql.sock
 **system error number 13**: 权限问题  
 **解决方案**关闭 selinux ：setenforce 0 
 不关闭 selinux ?????? chown -R mysql:mysql ./mysql/ ?????? 重启时测试下 
+
+### NO Route to Host 的解决办法
+防火墙未开   
+iptables -I INPUT -p tcp --dport [your port] -j ACCEPT
