@@ -1,5 +1,5 @@
-# 个人笔记
 [TOC]
+# 个人笔记
 ## GIT
 - git status 
 - git add .
