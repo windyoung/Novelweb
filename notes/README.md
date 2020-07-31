@@ -53,7 +53,10 @@ FLUSH PRIVILEGES;
 ## python
 ### virtualenv
 cd /home/vscweb/project_code/Novelweb/books_flask  
-virtualenv -p python3 .book_flask_env   
+创建virtualenv -p python3 .book_flask_env   
+使用 source .book_flask_env/bin/activate  
+退出 deactivate
+
 
 ********
 ********
