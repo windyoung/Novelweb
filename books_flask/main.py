@@ -1,7 +1,10 @@
+# !/usr/bin/env python3
+# coding=utf-8
+
 '''
 @Date: 2020-07-31 11:13:27
 @LastEditors: zhujian
-@LastEditTime: 2020-07-31 11:27:22
+@LastEditTime: 2020-07-31 11:42:40
 @FilePath: /Novelweb/books_flask/main.py
 '''
 from flask import Flask
