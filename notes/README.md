@@ -64,5 +64,5 @@ flask + Vue3.0 + mysql
 - FLUSH PRIVILEGES;
 ### [ERROR] InnoDB: Operating system error number 13 in a file operation.
 - system error number 13 :: 权限问题
-解决方案 关闭 selinuxselinux ：setenforce 0 
-?????? chown -R mysql:mysql ./mysql/ ?????? 重启时测试下 
+- 解决方案 关闭 selinuxselinux ：setenforce 0 
+- ?????? chown -R mysql:mysql ./mysql/ ?????? 重启时测试下 
