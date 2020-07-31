@@ -20,11 +20,11 @@ mysql
 ### 新建用户 bookbookwebweb
 - #这个命令会让你创建一个能在本地登录的alex1943_read_books的帐号，密码为qwe123，并且允许远程登录
 CREATE USER 'alex1943_read_books'@'%' IDENTIFIED BY 'qwe123';  
-- #把这个数据库的所有权限赋予给这个alex1943_read_books这个账户
+- #把这个数据库的所有权限赋予给这个alex1943_read_books这个账户  
 GRANT ALL PRIVILEGES ON books.* TO 'alex1943_read_books'@'%';  
-- #这条命令会让alex1943_read_books这个账户会有和root一样的权限
+- #这条命令会让alex1943_read_books这个账户会有和root一样的权限  
 GRANT ALL PRIVILEGES ON *.* TO 'alex1943_read_books'@'%';  
-- 这条是正确的打开方式
+**这条是正确的打开方式 ** 
 GRANT select ON books.* TO 'alex1943_read_books'@'%';  
 - #刷新权限
 FLUSH PRIVILEGES;  
@@ -37,14 +37,14 @@ FLUSH PRIVILEGES;
 ## CENTOS7 
 ### 防火墙
 - iptables -I INPUT -p tcp --dport 23306 -j ACCEPT
-
-****
-# 问题处理
-## CENTOS7 问题合集
 ### 磁盘挂载
 - 挂载磁盘 mount /dev/mapper/data_ssd_0-database  /database_data 
 - 设置开机自动挂载需要修改/etc/fstab文件
 在文件的最后增加一行  /dev/mapper/data_ssd_0-database  /database_data  defaults 1 2
+
+****
+# 问题处理
+## CENTOS7 问题合集
 #### 磁盘挂载后进入应急模式 
 进入系统输入 root 密码 ,  取消对 /etc/fstab文件 的修改   
 查询 磁盘的UUID : lsblk -f    
@@ -74,6 +74,6 @@ default-character-set=utf8
 socket=/storage/db/mysql/mysql.sock   
 其中socket等于的路径就是socket文件的位置，我们只要修改my.cnf文件,告诉mysql，mysqldump，mysqladmin等命令，mysql服务的socket文件位置在哪里，然后重启mysqld服务即可。  
 ### [ERROR] InnoDB: Operating system error number 13 in a file operation.
-system error number 13 :: 权限问题
+**system error number 13**: 权限问题  
 **解决方案**关闭 selinux ：setenforce 0 
 不关闭 selinux ?????? chown -R mysql:mysql ./mysql/ ?????? 重启时测试下 
