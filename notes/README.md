@@ -8,6 +8,7 @@
 - ggit 脚本 自动三连提交 
 ## 技术方案
 flask + Vue3.0 + mysql 
+****
 ## mysql
 - #查看生成临时密码
 - grep 'temporary password' /var/log/mysqld.log
@@ -36,6 +37,7 @@ flask + Vue3.0 + mysql
 - iptables -I INPUT -p tcp --dport 23306 -j ACCEPT
 
 ***
+
 # 问题处理
 ## CENTOS7 问题合集
 ### 磁盘
