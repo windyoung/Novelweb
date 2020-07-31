@@ -48,14 +48,14 @@ FLUSH PRIVILEGES;
 - 挂载磁盘 mount /dev/mapper/data_ssd_0-database  /database_data 
 - 设置开机自动挂载需要修改/etc/fstab文件
 在文件的最后增加一行  /dev/mapper/data_ssd_0-database  /database_data  defaults 1 2
-
 ***
 ## python
 ### virtualenv
 cd /home/vscweb/project_code/Novelweb/books_flask  
 virtualenv -p python3 .book_flask_env   
 
-****
+********
+********
 # 问题处理
 ## CENTOS7 问题合集
 #### 磁盘挂载后进入应急模式 
