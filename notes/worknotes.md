@@ -107,3 +107,18 @@ socket=/storage/db/mysql/mysql.sock
 ### NO Route to Host 的解决办法
 防火墙未开   
 iptables -I INPUT -p tcp --dport [your port] -j ACCEPT
+
+***
+## python 问题
+### TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+MYSQL_PORT = 23308 后面不加“,”
+
+***
+## VUE3.0
+### 公网访问配置
+- 公网域名，端口开放 
+- 配置.env.development “VUE_APP_URL = 'http://[你的域名]:[你的端口]/'”
+- 配置 vue.config.js 
+  devServer:   {host: "0.0.0.0",
+                port: 28000,｝
+### 

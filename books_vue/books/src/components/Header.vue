@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-08-25 22:07:21
  * @LastEditors: zhujian
- * @LastEditTime: 2020-08-26 00:02:09
+ * @LastEditTime: 2020-08-26 04:25:38
  * @FilePath: /Novelweb/books_vue/books/src/components/Header.vue
 -->
 <template>
@@ -61,7 +61,7 @@
             //props:来自父组件传入的内容（来自爸爸的爱）；
             //context ：当前组件拥有的内容
             GetCates().then(response => {
-                console.log(response)
+                console.log("In Header response = ",response)
             });
         }
     }
