@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-08-25 22:07:21
  * @LastEditors: zhujian
- * @LastEditTime: 2020-08-25 23:32:09
+ * @LastEditTime: 2020-08-25 23:39:37
  * @FilePath: /Novelweb/books_vue/books/src/components/Header.vue
 -->
 <template>
@@ -14,10 +14,10 @@
     
                 <b-collapse id="nav-collapse" is-nav>
                     <b-navbar-nav>
-                        <b-nav-item href="#">Link</b-nav-item>
-                        <b-nav-item href="#">Link</b-nav-item>
-                        <b-nav-item href="#">Link</b-nav-item>
-                        <b-nav-item href="#">Link</b-nav-item>
+                        <b-nav-item href="#">Link1</b-nav-item>
+                        <b-nav-item href="#">Link2</b-nav-item>
+                        <b-nav-item href="#">Link3</b-nav-item>
+                        <b-nav-item href="#">Link4</b-nav-item>
                         <b-nav-item href="#" disabled>Disabled</b-nav-item>
                     </b-navbar-nav>
     
@@ -36,7 +36,7 @@
                         <b-nav-item-dropdown right>
                             <!-- Using 'button-content' slot -->
                             <template v-slot:button-content>
-                  <em>User</em>
+                      <em>User</em>
 </template>
             <b-dropdown-item href="#">Profile</b-dropdown-item>
             <b-dropdown-item href="#">Sign Out</b-dropdown-item>
@@ -50,9 +50,13 @@
 
 
 <script>
-    
+    export default {
+        setup() {
+            
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
-     // lang 解释其CSS符合什么编译器的语法 。scoped：当前vue文件生效，没有 Scoped ： 则全局生效
+    // lang 解释其CSS符合什么编译器的语法 。scoped：当前vue文件生效，没有 Scoped ： 则全局生效
 </style>
