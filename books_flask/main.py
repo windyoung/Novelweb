@@ -3,12 +3,10 @@
 
 '''
 @Date: 2020-07-31 11:13:27
-@LastEditors: zhujian
-@LastEditTime: 2020-07-31 17:13:37
-@FilePath: /Novelweb/books_flask/main.py
+LastEditors: zhujian
+LastEditTime: 2020-08-26 00:32:13
+FilePath: /Novelweb/books_flask/main.py
 '''
-
-
 from flask import Flask
 from books import Book 
 """
@@ -23,6 +21,15 @@ from books import Book
 """
 app=Flask(__name__)
 app.config['JSON_AS_ASCII']=False
+
+@app.route('/books_cates',method=['GET'])
+def get_books_cates():
+    resData={
+    rescode:0 ,
+    datadata: "" ,
+    message: ""
+}
+    return resData 
 
 @app.route('/')
 def hello_world():
