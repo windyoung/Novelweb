@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-08-25 21:34:31
  * @LastEditors: zhujian
- * @LastEditTime: 2020-08-25 21:46:39
+ * @LastEditTime: 2020-08-25 21:51:24
  * @FilePath: /Novelweb/books_vue/books/src/views/Home.vue
 -->
 <template>
@@ -45,6 +45,7 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
+      </div>
 </b-container> 
 <b-container  >
 <div style="height:1000px;background-color:red">
@@ -58,7 +59,7 @@ footer 部分
 </b-container>
 
 </div>
-  </div>
+
 </template>
 
 <script>

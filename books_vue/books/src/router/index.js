@@ -1,3 +1,9 @@
+/*
+ * @Date: 2020-08-25 21:50:23
+ * @LastEditors: zhujian
+ * @LastEditTime: 2020-08-25 22:04:51
+ * @FilePath: /Novelweb/books_vue/books/src/router/index.js
+ */
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
@@ -5,20 +11,14 @@ import Home from "../views/Home.vue";
 Vue.use(VueRouter);
 
 const routes = [
-  {
+  {//网站首页
     path: "/",
     name: "Home",
     component: Home
   },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
+  //网站分类页
+  //图书首页
+  //图书详情页
 ];
 
 const router = new VueRouter({
