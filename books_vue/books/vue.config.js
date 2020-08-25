@@ -42,7 +42,7 @@ module.exports = {
     Object.assign(config, {
       // 开发生产共同配置
       resolve: {
-        extensions: [".js", ".vue", ".json"], //请求本地json
+        extensions: [".js", ".vue", ".json"], //请求本地json ; 此处可以自动补全
         alias: {
           "@": path.resolve(__dirname, "./src"),
           "@c": path.resolve(__dirname, "./src/components"),
@@ -71,7 +71,7 @@ module.exports = {
         // 我们去创建它
       },
       scss: {
-        prependData: '@import "./src/styles/main.scss";' 
+        prependData: '@import "./src/styles/main.scss";'
       }
     }
   },
