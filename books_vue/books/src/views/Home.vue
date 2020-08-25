@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-08-25 21:34:31
  * @LastEditors: zhujian
- * @LastEditTime: 2020-08-26 05:07:36
+ * @LastEditTime: 2020-08-26 06:52:08
  * @FilePath: /Novelweb/books_vue/books/src/views/Home.vue
 -->
 <template>
@@ -19,6 +19,7 @@
 <script>
   import Header from "../components/Header.vue"
   import Footer from "../components/Footer.vue"
+  
   export default {
     name: "Home",
     components: {

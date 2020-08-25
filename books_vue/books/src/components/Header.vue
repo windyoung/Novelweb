@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-08-25 22:07:21
  * @LastEditors: zhujian
- * @LastEditTime: 2020-08-26 04:25:38
+ * @LastEditTime: 2020-08-26 05:35:31
  * @FilePath: /Novelweb/books_vue/books/src/components/Header.vue
 -->
 <template>
@@ -36,7 +36,7 @@
                         <b-nav-item-dropdown right>
                             <!-- Using 'button-content' slot -->
                             <template v-slot:button-content>
-                                      <em>User</em>
+                                              <em>User</em>
 </template>
             <b-dropdown-item href="#">Profile</b-dropdown-item>
             <b-dropdown-item href="#">Sign Out</b-dropdown-item>
@@ -60,8 +60,8 @@
             // setup 相当于 beforecreate ， created ; 
             //props:来自父组件传入的内容（来自爸爸的爱）；
             //context ：当前组件拥有的内容
-            GetCates().then(response => {
-                console.log("In Header response = ",response)
+            GetCates().then(reponse => {
+                console.log("In Header reponse =", reponse)
             });
         }
     }

@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-08-25 20:50:08
  * @LastEditors: zhujian
- * @LastEditTime: 2020-08-25 20:50:08
+ * @LastEditTime: 2020-08-26 05:34:42
  * @FilePath: /Novelweb/books_vue/books/src/utils/request.js
  */
 import axios from "axios";
@@ -11,7 +11,7 @@ import axios from "axios";
 // console.log("in request.js", process.env.VUE_APP_URL);
 
 // axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? '' : '/api';  //关键代码
-const BASEURL = process.env.NODE_ENV === "production" ? "" : "/api";
+const BASEURL = process.env.NODE_ENV === "production" ? "" : "/";
 // console.log("in request.js: BASEURL = ", BASEURL);
 
 // 创建axios
