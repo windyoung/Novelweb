@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-08-25 22:07:21
- * @LastEditors: zhujian
- * @LastEditTime: 2020-08-26 05:35:31
+ * @LastEditors: nobody
+ * @LastEditTime: 2020-08-27 04:46:42
  * @FilePath: /Novelweb/books_vue/books/src/components/Header.vue
 -->
 <template>
@@ -50,9 +50,7 @@
 
 
 <script>
-    import {
-        GetCates
-    } from '../apis/read.js'
+    import { GetCates } from '../apis/read.js'
     
     export default {
         name: "Header",
@@ -60,8 +58,8 @@
             // setup 相当于 beforecreate ， created ; 
             //props:来自父组件传入的内容（来自爸爸的爱）；
             //context ：当前组件拥有的内容
-            GetCates().then(reponse => {
-                console.log("In Header reponse =", reponse)
+            GetCates().then(response =>{
+                console.log("In Header response =", response.data.data);
             });
         }
     }

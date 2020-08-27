@@ -1,17 +1,19 @@
 /*
  * @Date: 2020-08-25 20:50:08
- * @LastEditors: zhujian
- * @LastEditTime: 2020-08-26 05:34:42
+ * @LastEditors: nobody
+ * @LastEditTime: 2020-08-27 05:04:50
  * @FilePath: /Novelweb/books_vue/books/src/utils/request.js
  */
 import axios from "axios";
 
-// console.log("in request.js", process.env.NODE_ENV);
+console.log("in request.js", process.env.NODE_ENV);
 
-// console.log("in request.js", process.env.VUE_APP_URL);
+console.log("in request.js process.env.VUE_APP_URL", process.env.VUE_APP_URL);
 
 // axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? '' : '/api';  //关键代码
-const BASEURL = process.env.NODE_ENV === "production" ? "" : "/";
+// console.log('process.env.NODE_ENV', process.env.NODE_ENV);
+const BASEURL = process.env.NODE_ENV === "production" ? "/api" : "/";
+console.log('NODE_ENV', process.env.NODE_ENV , BASEURL);
 // console.log("in request.js: BASEURL = ", BASEURL);
 
 // 创建axios
@@ -23,7 +25,7 @@ const service = axios.create({
 // 请求拦截器： 在浏览器发送请求之前的处理; 用处：对真的发送请求之前可以判断，比如是否合法，是否符合请求参数的要求
 service.interceptors.request.use(
   function(config) {
-    console.log("request.js: request:  config===== ", config);
+    console.log("request.js: request: config===== ", config);
     return config;
   },
   function(error) {

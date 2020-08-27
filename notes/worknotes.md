@@ -121,9 +121,12 @@ MYSQL_PORT = 23308 后面不加“,”
 - 配置 vue.config.js 
   devServer:   {host: "0.0.0.0",
                 port: 28000,｝
+
+### process.env.VUE_APP_URL 
+- vue.config.js proxy{   target:'http://127.0.0.1:25000/',  }
+- process.env.VUE_APP_URL  指代 VUE 获取数据的接口
+
 ### VUE console 日志显示 “GET http://[你的域名]:28000/api/books_cates 404 (Not Found)”
 - 这里的端口配置错误，子路径配置错误
 - 子路径修改配置 : request.js -> const BASEURL = process.env.NODE_ENV === "production" ? "" : "/"; 
   这里配置 VUE3.0 从 flask API 取数据的接口地址
-- 端口修改配置 ：
-  这里配置 VUE3.0 从 flask API 取数据的端口 ， 实际为 25000

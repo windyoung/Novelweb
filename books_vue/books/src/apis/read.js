@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-08-25 23:53:50
- * @LastEditors: zhujian
- * @LastEditTime: 2020-08-25 23:58:52
+ * @LastEditors: nobody
+ * @LastEditTime: 2020-08-27 04:51:08
  * @FilePath: /Novelweb/books_vue/books/src/apis/read.js
  */
 
@@ -14,3 +14,4 @@ export function GetCates() {
         url: "/books_cates"
     });
 };
+

@@ -9,7 +9,8 @@ module.exports = {
     config.resolve.symlinks(true); //热更新
   },
   configureWebpack: config => {
-    console.log('NODE_ENV', 'process.env.NODE_ENV')
+    console.log('vue.config.js process.env.NODE_ENV ', process.env.NODE_ENV);
+    console.log('vue.config.js process.env.VUE_APP_URL', process.env.VUE_APP_URL);
     if (process.env.NODE_ENV === "production") {
       // 为生产环境修改配置...
       config.mode = "production";
